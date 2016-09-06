@@ -1,4 +1,4 @@
-print("EXERCISE SEPTEMBER FIRST")
+print("EXERCISES CLASS ONE")
 #VARIABLES
 seconds = 42*60+60      #convert to seconds
 miles = 10/1.61         #convert to miles
@@ -10,7 +10,7 @@ print('Q1:',seconds)
 print('Q2:',miles)
 print('Q3: average pace=',apm,'mph=', 60/apm)
 
-print('EXERCISE SEPTEMBER SIXTH')
+print('EXERCISES CLASS TWO')
 #VARIABLES
 pi = 3.14159                        #value of pi
 r = 5                               #value of radius
