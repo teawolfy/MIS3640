@@ -23,7 +23,7 @@ shipping = 3+((quantity-1)*.75)     #shipping cost
 #Question 3
 easy_tempo= 2*8.25                  #time at easy tempo
 hard_tempo= 3*7.2                   #time at hard tempo
-total_time= easy tempo + hard tempo #total time spent running
+total_time= easy_tempo + hard_tempo #total time spent running
 end_time = total time - 8           #the amount of minutes past 7:00am
 #Question 4
 percent = ((89-82)/82)*100          #calculates total percentage
