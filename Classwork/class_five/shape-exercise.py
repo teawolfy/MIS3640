@@ -5,7 +5,7 @@ import math
 import *
 tpen = turtle.Turtle()
 tpen.pensize(4)
-tpen.hideturtle()
+tpen.hideturtle() 
 
 print(tpen)
 
