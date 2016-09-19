@@ -1,3 +1,4 @@
+
 {
     "version": "0.2.0",
     "configurations": [
@@ -15,26 +16,13 @@
             ]
         },
         {
-            "name": "Integrated Terminal/Console",
+            "name": "Python Console App",
             "type": "python",
             "request": "launch",
             "stopOnEntry": false,
             "pythonPath": "${config.python.pythonPath}",
             "program": "${file}",
-            "console": "integratedTerminal",
-            "debugOptions": [
-                "WaitOnAbnormalExit",
-                "WaitOnNormalExit"
-            ]
-        },
-        {
-            "name": "External Terminal/Console",
-            "type": "python",
-            "request": "launch",
-            "stopOnEntry": false,
-            "pythonPath": "${config.python.pythonPath}",
-            "program": "${file}",
-            "console": "externalTerminal",
+            "externalConsole": true,
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit"
@@ -59,20 +47,6 @@
             ]
         },
         {
-            "name": "Flask",
-            "type": "python",
-            "request": "launch",
-            "stopOnEntry": true,
-            "pythonPath": "${config.python.pythonPath}",
-            "program": "${workspaceRoot}/run.py",
-            "args": [],
-            "debugOptions": [
-                "WaitOnAbnormalExit",
-                "WaitOnNormalExit",
-                "RedirectOutput"
-            ]
-        },
-        {
             "name": "Watson",
             "type": "python",
             "request": "launch",
@@ -91,7 +65,7 @@
             ]
         },
         {
-            "name": "Attach (Remote Debug)",
+            "name": "Attach",
             "type": "python",
             "request": "attach",
             "localRoot": "${workspaceRoot}",

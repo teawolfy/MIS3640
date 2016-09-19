@@ -36,13 +36,13 @@ def arc(t, r, angle):
         t.fd(step_length)
         t.lt(step_angle)
 
-#arc(shape, 200, 45)
+arc(shape, 200, 45)
 
 def polyline(t, n, length, angle):
     for i in range(n):
         t.fd(length)
         t.lt(angle) 
 
-#polyline(shape,30,100,45) 
+#polyline(shape,30,100,45)
 
 turtle.mainloop()
