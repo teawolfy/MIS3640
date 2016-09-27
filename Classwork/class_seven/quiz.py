@@ -56,8 +56,10 @@ Write a function with loops that computes The sum of all squares between
 
 
 def sum_squares(n):
-    for i in range(1,n):
-        
+    result = 0
+    for i in range(1,n+1):
+        result += i * i
+    return result
     pass
 
 print(sum_squares(1))
