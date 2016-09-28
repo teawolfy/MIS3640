@@ -5,9 +5,8 @@ Question 1:
 
 
 def crazy_about_9(a, b):
-   if a == 9 or b == 9 or abs(a-b)==9:
+    if a == 9 or b == 9 or abs(a-b)==9:
        return True
-   else
     return False
 
 print(crazy_about_9(2, 9))
@@ -32,10 +31,13 @@ years (for example, 2000).
 
 def leap_year(year):
     if year%4 == 0 and year%100 != 0:
-        if year%400 == 0:
-            print(year, " is a leap year")
+        return year, " is not a leap year"
+    elif year%400 == 0:
+        return year, " is a leap year"
     elif year%4 != 0:
-        print(year, "is not a leap year")
+        return year,  " is not a leap year"
+    else:
+        return year, ' is not a leap year'
     pass
 
 
@@ -61,6 +63,7 @@ def sum_squares(n):
         result += i * i
     return result
     pass
+
 
 print(sum_squares(1))
 print(sum_squares(100))

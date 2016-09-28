@@ -4,3 +4,7 @@ def sum_squares(n):
         result += i * i
     return result
     pass
+
+    
+print(sum_squares(1))
+print(sum_squares(100))
