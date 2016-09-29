@@ -39,7 +39,7 @@ the_list = ['bananas', 'rice', 'paprika', 'potato chips']
 paperthing(the_list)
 """
 """
-EXERCISE FIVE
+#EXERCISE FIVE
 
 The first function only returns true or false of the first letter, and then stops
 
