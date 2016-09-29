@@ -12,6 +12,7 @@ def character_count(my_string, a):
             answer += 1
     return answer
 """
+"""
 #EXERCISE THREE WAS READING AND EXPERIMENTING
 
 #EXERCISE FOUR
@@ -36,13 +37,35 @@ def paperthing(my_list):
 the_list = ['bananas', 'rice', 'paprika', 'potato chips']
 
 paperthing(the_list)
+"""
+"""
+EXERCISE FIVE
 
+The first function only returns true or false of the first letter, and then stops
 
-#EXERCISE FIVE
+The second function checks the letter 'c' instead of the string stored in c, and it returns a string 'true' or 'false' instead of the True or False operators
 
+The third function only returns whether the last character is lowercase, because the flag variable keeps being reassigned
+
+The fourth function works for the intended purpose - if any character is found to be True, flag will be assigned True, and by the 'or'' statement will always be True thereafter
+
+The fifth function doesn't work because any character found to be not lowercase will return False and stop the function
+"""
+""""
 #EXERCISE SIX
+def rotate_word(my_word, rotate):
+    final_string = ''
+    for character in my_word:
+        if character.isalpha():
+            new_letter = chr((ord(character.lower()) - 97 + rotate) % 26 + 97)
+            final_string += new_letter
+        else:
+            final_string += character
+    return final_string
+"""
 
 """
+#CUBE BISECTION
 cube = 27
 epsilon = 0.01
 guess = 0.0
