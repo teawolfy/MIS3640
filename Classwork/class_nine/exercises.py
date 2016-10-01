@@ -130,8 +130,8 @@ Returns "True"" if the word contains three consecutive, double letters
 
 
 def find_triple_double():
-    fin = open('words.txt')
-    for line in fin:
+    word = open('words.txt')
+    for line in word:
         word = line.strip()
         if is_triple_double(word):
             print word
