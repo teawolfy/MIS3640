@@ -11,8 +11,10 @@ def chooseWord(wordlist):
 # -----------------------------------
 
 wordList = list(line.strip() for line in open('words.txt'))
- 
-def win_state(guessed_letters, secret_word):
+
+#will admit, google told me to work the logic this way -> define win state and then the function
+#establishes how the user wins the game
+def win(guessed_letters, secret_word):
     for letter in secret_word:
         if letter not in guessed_letters:
             return False
@@ -37,17 +39,19 @@ def play_hangman(secret_word):
         revealed = ''
         player_guess = ''
         while player_guess not in available_letters:
-            #letter guesses must be guessed with '' around - not sure why....
+            #DEBUG CONFUSION: letter guesses must be guessed with '' around - not sure why....
             player_guess = str(input('Please guess a letter: '))
-            player_guess = player_guess.lower()
+            player_guess = player_guess.lower() #establishing that the guess had to be lowercase 
         guessed_letters.append(player_guess)
         available_letters.remove(player_guess)
         for letter in secret_word:
+            number_of_guesses -= 1
             if letter in guessed_letters:
                 revealed += letter
             else:
                 revealed += '_'
         if player_guess in secret_word:
+            number_of_guesses -= 1
             print('That letter was a good guess. %s is in the secret word' %(revealed))
         else:
             number_of_guesses -= 1
