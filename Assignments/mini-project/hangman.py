@@ -13,7 +13,7 @@ def chooseWord(wordlist):
 
 wordList = list(line.strip() for line in open('words.txt'))
 
-#will admit, google told me to work the logic this way -> define win state and then the function
+#will admit, google told me to work the logic this way -> define win state and then the function. I originally was going to define it in the function.
 #establishes how the user wins the game
 def win_state(guessed_letters, secret_word):
     for letter in secret_word:
@@ -46,16 +46,15 @@ def play_hangman(secret_word):
         guessed_letters.append(player_guess)
         available_letters.remove(player_guess)
         for letter in secret_word:
+            #DEBUG CONFUSION: number of guesses automatically drops to a much lower number
             number_of_guesses -= 1
             if letter in guessed_letters:
                 revealed += letter
             else:
                 revealed += '_'
         if player_guess in secret_word:
-            number_of_guesses -= 1
             print('That letter was a good guess. %s is in the secret word' %(revealed))
         else:
-            number_of_guesses -= 1
             print('Wrong! That letter is not in my word: %s' %(revealed))
         print('You have %d guesses left' %(number_of_guesses))
         print('-------------------------------------------')
