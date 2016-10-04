@@ -15,7 +15,7 @@ wordList = list(line.strip() for line in open('words.txt'))
 
 #will admit, google told me to work the logic this way -> define win state and then the function
 #establishes how the user wins the game
-def win(guessed_letters, secret_word):
+def win_state(guessed_letters, secret_word):
     for letter in secret_word:
         if letter not in guessed_letters:
             return False
@@ -57,7 +57,7 @@ def play_hangman(secret_word):
         else:
             number_of_guesses -= 1
             print('Wrong! That letter is not in my word: %s' %(revealed))
-        print('You have %d guesses left' %(guesses))
+        print('You have %d guesses left' %(number_of_guesses))
         print('-------------------------------------------')
     if number_of_guesses == 0:
         print('You lose! The word is %s' %(secret_word))
