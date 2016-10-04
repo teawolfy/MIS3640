@@ -1,3 +1,4 @@
+#establish how to select random word
 import random
  
 def chooseWord(wordlist):
