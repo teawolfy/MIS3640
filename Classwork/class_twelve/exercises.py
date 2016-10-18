@@ -58,7 +58,9 @@ def make_anagram_dict(word_list):
 anagrams = make_anagram_dict(words)
 
 def print_anagrams(anagrams):
-    """Uses a generator to call and print 5 items from mydict"""
+    """
+    Uses a generator to call and print 5 items from dictionary
+    """
     fp = (fp for fp in anagrams)
 
     print("Sample from anagram dict:")
