@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""
+# FUNCTION BUILDING
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
 import random
 import string
 
@@ -85,17 +89,9 @@ def compare(hist, scarywords):
             new[key] = hist.get(key, 0)
     return new
 
-#def score(hist):
-    """
-    Returns the rating for how scary an author is
-    """
-    #new = compare(hist, scarywords)
-    #total = {}
-    #for word in new:
-        #total = hist.get(word)
-        #score = sum(total)
-    #return score
-
+"""""""""""""""""""""""""""""""""""""""""""""""""
+# ANALYSIS
+"""""""""""""""""""""""""""""""""""""""""""""""""
 
 scarywords = process_file('horrorkeywords.txt', skip_header=False)
 book = process_file('poe1.txt', skip_header=True)
