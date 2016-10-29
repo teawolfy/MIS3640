@@ -1,6 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""
-# FUNCTION BUILDING
-"""""""""""""""""""""""""""""""""""""""""""""""""
+#FUNCTION BUILDING
 
 import random
 import string
@@ -89,9 +87,7 @@ def compare(hist, scarywords):
             new[key] = hist.get(key, 0)
     return new
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
-# ANALYSIS
-"""""""""""""""""""""""""""""""""""""""""""""""""
+#ANALYSIS
 
 scarywords = process_file('horrorkeywords.txt', skip_header=False)
 book = process_file('poe1.txt', skip_header=True)
@@ -140,7 +136,7 @@ def bierce1():
     print('The most common scary words are:' )
     print_most_common(t ,num = 200)
     score = sum(hist.values())
-    print('The scary score for Poe is: ')
+    print('The scary score for Bierce is: ')
     print(score)
 
 def bierce2():
@@ -150,7 +146,7 @@ def bierce2():
     print('The most common scary words are:' )
     print_most_common(t ,num = 200)
     score = sum(hist.values())
-    print('The scary score for Poe is: ')
+    print('The scary score for Bierce is: ')
     print(score)
 
 def bierce():
@@ -165,7 +161,7 @@ def james():
     print('The most common scary words are:' )
     print_most_common(t ,num = 200)
     score = sum(hist.values())
-    print('The scary score for Poe is: ')
+    print('The scary score for James is: ')
     print(score)
     print('---------------------------------------------')
 
@@ -176,7 +172,7 @@ def lovecraft():
     print('The most common scary words are:' )
     print_most_common(t ,num = 200)
     score = sum(hist.values())
-    print('The scary score for Poe is: ')
+    print('The scary score for Lovecraft is: ')
     print(score)
     print('---------------------------------------------')
    
