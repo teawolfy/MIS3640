@@ -91,90 +91,94 @@ def compare(hist, scarywords):
 
 scarywords = process_file('horrorkeywords.txt', skip_header=False)
 book = process_file('poe1.txt', skip_header=True)
-author = ['Edgar Allan Poe', 'Henry James','HP Lovecraft', 'Ambrose Bierce']
 
 def poe1():
     hist = process_file('poe1.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for Poe is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score1 = sum(hist.values())
+    return score1
 
 def poe3():
     hist = process_file('poe3.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for Poe is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score2 = sum(hist.values())
+    return score2
 
 def poe5():
     hist = process_file('poe2.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for Poe is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score3 = sum(hist.values())
+    return score3
 
 def poe():
-    poe1()
-    poe3()
-    poe5()
+    score1 = int(poe1())
+    score2 = int(poe3())
+    score3 = int(poe5())
+    scorePoe = (score1 + score2 + score3)/3
+    print('The scary score for Edgar Allan Poe is: ')
+    print(scorePoe)
     print('---------------------------------------------')
 
 def bierce1():
     hist = process_file('bierce1.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for Bierce is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score4 = sum(hist.values())
+    return score4
 
 def bierce2():
     hist = process_file('bierce2.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for Bierce is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score5 = sum(hist.values())
+    return score5
+    
 
 def bierce():
-    bierce1()
-    bierce2()
+    score4 = int(bierce1())
+    score5 = int(bierce2())
+    scoreBierce = (score4 +  score5)/2
+    print('The scary score for Ambrose Bierce is: ')
+    print(scoreBierce)
     print('---------------------------------------------')
 
 def james():
     hist = process_file('james.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
-    print('The scary score for James is: ')
-    print(score)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    scoreJames = sum(hist.values())
+    print('The score for Henry James is: ')
+    print(scoreJames)
     print('---------------------------------------------')
 
 def lovecraft():
     hist = process_file('lovecraft.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
-    score = sum(hist.values())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    scoreLovecraft = sum(hist.values())
     print('The scary score for Lovecraft is: ')
-    print(score)
+    print(scoreLovecraft)
     print('---------------------------------------------')
+
+def getScariestAuthor():
+    if 
    
 
 
