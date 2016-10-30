@@ -197,12 +197,11 @@ def getScariestAuthor():
     print('---------------------------------------------')
     print('The computer says that ')
     print(maximum)
-    print('is the most scary author')
-   
-
+    print('is the largest score')
+    print('---------------------------------------------')
+    print('So, Edgar Allan Poe is the scariest author!')
 
 if __name__ == '__main__':
-    
     
     #poe()
     #bierce()

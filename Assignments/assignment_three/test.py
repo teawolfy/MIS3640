@@ -1,3 +1,5 @@
+#FUNCTION BUILDING
+
 import random
 import string
 
@@ -68,7 +70,6 @@ def print_most_common(hist, num=1000):
     num: number of words to print
     """
     t = most_common(hist)
-    # print('The most common scary words are:')
     for freq, word in t[:num]:
         print(word, '\t', freq)
 
@@ -86,16 +87,128 @@ def compare(hist, scarywords):
             new[key] = hist.get(key, 0)
     return new
 
+#ANALYSIS
+
 scarywords = process_file('horrorkeywords.txt', skip_header=False)
 book = process_file('poe1.txt', skip_header=True)
 
-def main():
+def poe1():
     hist = process_file('poe1.txt', skip_header=True)
     scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
-    t = compare(hist,scarywords)
-    print('The most common scary words are:' )
-    print_most_common(t ,num = 200)
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score1 = sum(hist.values())
+    return score1
+
+def poe3():
+    hist = process_file('poe3.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score2 = sum(hist.values())
+    return score2
+
+def poe5():
+    hist = process_file('poe2.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score3 = sum(hist.values())
+    return score3
+
+def poe():
+    score1 = int(poe1())
+    score2 = int(poe3())
+    score3 = int(poe5())
+    scorePoe = (score1 + score2 + score3)/3
+    print('The scary score for Edgar Allan Poe is: ')
+    print(scorePoe)
+    print('---------------------------------------------')
+    return scorePoe
+
+def bierce1():
+    hist = process_file('bierce1.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score4 = sum(hist.values())
+    return score4
+
+def bierce2():
+    hist = process_file('bierce2.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    score5 = sum(hist.values())
+    return score5
+    
+
+def bierce():
+    score4 = int(bierce1())
+    score5 = int(bierce2())
+    scoreBierce = (score4 +  score5)/2
+    print('The scary score for Ambrose Bierce is: ')
+    print(scoreBierce)
+    print('---------------------------------------------')
+    return scoreBierce
+
+def james():
+    hist = process_file('james.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    scoreJames = sum(hist.values())
+    print('The scary score for Henry James is: ')
+    print(scoreJames)
+    print('---------------------------------------------')
+    return scoreJames
+
+def lovecraft():
+    hist = process_file('lovecraft.txt', skip_header=True)
+    scarywords = list(process_file('horrorkeywords.txt', skip_header=False).keys())
+    #t = compare(hist,scarywords)
+    #print('The most common scary words are:' )
+    #print_most_common(t ,num = 200)
+    scoreLovecraft = sum(hist.values())
+    print('The scary score for HP Lovecraft is: ')
+    print(scoreLovecraft)
+    print('---------------------------------------------')
+    return scoreLovecraft
+
+def getScariestAuthor():
+    print('---------------------------------------------')
+    print('In the spirit of Halloween, we decided to find who is the scariest author of all time!')
+    print('First, we see how much the author writes scary words in their work, called a scary score')
+    print('---------------------------------------------')
+    EdgarAllanPoe = int(poe())
+    AmbroseBierce = int(bierce())
+    HenryJames = int(james())
+    HPLovecraft = int(lovecraft())
+    maximum = max('AmbroseBierce','HenryJames', 'HPLovecraft', 'EdgarAllanPoe')
+    print('---------------------------------------------')
+    print('Now that we know the score for each author,')
+    print('The computer judges who is the scariest author')
+    print('---------------------------------------------')
+    print('The computer says that ')
+    print(maximum)
+    print('is the most scary author')
+   
 
 
 if __name__ == '__main__':
-    main()
+    
+    
+    #poe()
+    #bierce()
+    #james()
+    #lovecraft()
+
+    getScariestAuthor()
+
+    
