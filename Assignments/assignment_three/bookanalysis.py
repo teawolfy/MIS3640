@@ -127,6 +127,7 @@ def poe():
     print('The scary score for Edgar Allan Poe is: ')
     print(scorePoe)
     print('---------------------------------------------')
+    return scorePoe
 
 def bierce1():
     hist = process_file('bierce1.txt', skip_header=True)
@@ -154,6 +155,7 @@ def bierce():
     print('The scary score for Ambrose Bierce is: ')
     print(scoreBierce)
     print('---------------------------------------------')
+    return scoreBierce
 
 def james():
     hist = process_file('james.txt', skip_header=True)
@@ -162,9 +164,10 @@ def james():
     #print('The most common scary words are:' )
     #print_most_common(t ,num = 200)
     scoreJames = sum(hist.values())
-    print('The score for Henry James is: ')
+    print('The scary score for Henry James is: ')
     print(scoreJames)
     print('---------------------------------------------')
+    return scoreJames
 
 def lovecraft():
     hist = process_file('lovecraft.txt', skip_header=True)
@@ -173,20 +176,39 @@ def lovecraft():
     #print('The most common scary words are:' )
     #print_most_common(t ,num = 200)
     scoreLovecraft = sum(hist.values())
-    print('The scary score for Lovecraft is: ')
+    print('The scary score for HP Lovecraft is: ')
     print(scoreLovecraft)
     print('---------------------------------------------')
+    return scoreLovecraft
 
 def getScariestAuthor():
-    if 
+    print('---------------------------------------------')
+    print('In the spirit of Halloween, we decided to find who is the scariest author of all time!')
+    print('First, we see how much the author writes scary words in their work, called a scary score')
+    print('---------------------------------------------')
+    scoreP = int(poe())
+    scoreB = int(bierce())
+    scoreJ = int(james())
+    scoreL = int(lovecraft())
+    maximum = max('scoreB','scoreJ', 'scoreL', 'scoreP')
+    print('---------------------------------------------')
+    print('Now that we know the score for each author,')
+    print('The computer judges who is the scariest author')
+    print('---------------------------------------------')
+    print('The computer says that ')
+    print(maximum)
+    print('is the most scary author')
    
 
 
 if __name__ == '__main__':
     
-    poe()
-    bierce()
-    james()
-    lovecraft()
+    
+    #poe()
+    #bierce()
+    #james()
+    #lovecraft()
+
+    getScariestAuthor()
 
     
